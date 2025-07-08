@@ -1,7 +1,7 @@
 <?php
 require_once 'config.php';
 ini_set('memory_limit', '5G');
-$rootDir = __DIR__ . "/cleaned-csv/Location201562/";
+$rootDir = __DIR__ . "/historical-cleaned/Location201555/";
 
 $files = [
     'saleline' => 'saleline.csv',
