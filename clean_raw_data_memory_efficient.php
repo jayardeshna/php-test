@@ -10,7 +10,7 @@ echo "Output folder: historical-cleaned\n";
 echo "Date: " . date('Y-m-d H:i:s') . "\n\n";
 
 // Configuration - Change these as needed
-$SINGLE_LOCATION = 'Location201565'; // Set to specific location or null for all locations
+$SINGLE_LOCATION = 'Location201555'; // Set to specific location or null for all locations
 $OUTPUT_FOLDER = 'historical-cleaned'; // Output folder name
 
 // Define the required file types only (based on your screenshot)

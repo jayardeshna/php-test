@@ -11,7 +11,7 @@ echo "No database connection required\n";
 echo "Date: " . date('Y-m-d H:i:s') . "\n\n";
 
 // Configuration
-$LOCATION = 'Location201565';
+$LOCATION = 'Location201555';
 $INPUT_FOLDER = 'historical-cleaned';
 $OUTPUT_FOLDER = 'historical-cleaned';
 
