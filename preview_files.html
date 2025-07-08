@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Processing Preview</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background: #f0f0f0; padding: 15px; border-radius: 5px; }
+        .section { margin: 20px 0; }
+        .file-list { background: #f9f9f9; padding: 10px; border-left: 4px solid #007cba; }
+        .process { color: green; }
+        .skip { color: red; }
+        .stats { background: #e7f3ff; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Single Location File Processing Preview</h1>
+        <p><strong>Location:</strong> Location201555</p>
+        <p><strong>Output Folder:</strong> historical-cleaned</p>
+        <p><strong>Date Range:</strong> 2021-01-01 to Today</p>
+    </div>
+
+    <div class="section">
+        <h2>📋 Required File Types (Will Be Processed)</h2>
+        <div class="file-list">
+            <ul>
+                <li><strong>Sale_*</strong> → sale.csv</li>
+                <li><strong>SaleLine_*</strong> → saleline.csv</li>
+                <li><strong>SaleLineProduct_*</strong> → salelineproduct.csv</li>
+                <li><strong>SaleLineService_*</strong> → salelineservice.csv</li>
+                <li><strong>SaleLineEmployee_*</strong> → sale_line_employee.csv</li>
+                <li><strong>SaleLinePayment_*</strong> → sale_line_payment.csv</li>
+                <li><strong>SaleLineTax_*</strong> → sale_line_tax.csv</li>
+                <li><strong>SaleEmployeeTip_*</strong> → sale_employee_tip.csv</li>
+                <li><strong>ClientGiftCard_*</strong> → clientgiftcard.csv</li>
+                <li><strong>ClientMembership_T_*</strong> → clientmembership.csv</li>
+                <li><strong>ClientService_T_*</strong> → clientservice.csv</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📊 Expected Output Structure</h2>
+        <div class="file-list">
+            <pre>
+historical-cleaned/
+└── Location201555/
+    ├── sale.csv
+    ├── saleline.csv
+    ├── salelineproduct.csv
+    ├── salelineservice.csv
+    ├── sale_line_employee.csv
+    ├── sale_line_payment.csv
+    ├── sale_line_tax.csv
+    ├── sale_employee_tip.csv
+    ├── clientgiftcard.csv
+    ├── clientmembership.csv
+    └── clientservice.csv
+            </pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔧 How to Run PHP Scripts</h2>
+        <div class="file-list">
+            <h3>Option 1: Find your PHP installation</h3>
+            <p>Since you have Composer working, PHP is installed. Try these locations:</p>
+            <ul>
+                <li><code>C:\xampp\php\php.exe</code></li>
+                <li><code>C:\wamp64\bin\php\php8.x.x\php.exe</code></li>
+                <li><code>C:\Program Files\PHP\php.exe</code></li>
+            </ul>
+            
+            <h3>Option 2: Add PHP to PATH</h3>
+            <p>Add your PHP directory to Windows PATH environment variable</p>
+            
+            <h3>Option 3: Use full path</h3>
+            <p>Example: <code>C:\xampp\php\php.exe preview_single_location.php</code></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>▶️ Next Steps</h2>
+        <div class="stats">
+            <ol>
+                <li><strong>Find PHP:</strong> Locate your PHP installation</li>
+                <li><strong>Preview:</strong> Run <code>php preview_single_location.php</code></li>
+                <li><strong>Clean Data:</strong> Run <code>php clean_raw_data.php</code></li>
+                <li><strong>Check Output:</strong> Verify files in <code>historical-cleaned/Location201555/</code></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📝 Manual File Check</h2>
+        <div class="file-list">
+            <p>You can manually check what files will be processed by looking in:</p>
+            <p><code>E:\work_25\sftp-task\row-data\Location201555\</code></p>
+            <p>Look for files that:</p>
+            <ul>
+                <li>Start with the required prefixes (Sale_, SaleLine_, etc.)</li>
+                <li>Have dates from 2021 onwards (format: _YYYYMMDD.csv)</li>
+                <li>Are not temp files (.temp., index., readme.)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add current date
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelector('.header p:last-child').innerHTML = 
+                '<strong>Date Range:</strong> 2021-01-01 to ' + today;
+        });
+    </script>
+</body>
+</html>
